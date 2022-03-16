@@ -1,0 +1,518 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+
+/* Style global*/
+html, body {
+    margin: 0;
+    padding: 0;
+	font-family: 'Roboto', sans-serif;
+	scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+	max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 90px 40px;
+}
+
+section h3.title {
+	color: #001A21;
+	font-family: 'Berkshire Swash', cursive;
+	font-size: 60px;
+	font-weight: 500;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+section p {
+    text-align: center;
+    margin-bottom: 35px;
+    padding: 0 20px;
+    line-height: 1.2;
+}
+
+a.btn {
+	color: #fff;
+	border-radius: 4px;
+	text-transform: uppercase;
+	font-weight: 800;
+	text-align: center;
+	background: #278da6;
+	transition: background 1s;
+	padding: 15px;
+}
+
+a.btn:hover {
+	background: #207286;
+	transition: background 1s;
+}
+
+hr {
+	width: 150px;
+	height: 2px;
+	background-color: #278da6;
+	border: 0;
+	margin: 0 auto 60px;
+}
+
+/* Style de notre header */
+header {
+    padding: 15px 0;
+	position: absolute;
+	width:100%;
+}
+
+
+/* Style de notre notre menu */
+.container {
+	width: 1140px;
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+.main-header .container {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+.main-nav ul {
+	text-align: center;
+}
+
+.main-nav li {
+	display: inline;
+}
+
+.main-nav a {
+	display: inline-block;
+	padding: .5em 1.5em;
+    color: #fff;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.main-nav a:after {
+    display: block;
+    content: '';
+    border-bottom: solid 4px #278da6;  
+    transform: scaleX(0);  
+    transition: transform 0.25s ease-in-out;
+  }
+
+.main-nav a:hover:after {
+    transform: scaleX(1);
+}
+
+.main-nav a.fromLeft:after{
+    transform-origin:  0% 50%;
+}
+
+@media (min-width: 960px) {
+	.main-header .container {
+		justify-content: space-between;
+	}
+}
+
+#menuToggle {
+    display: none;
+}
+.menu-icon {
+    display: none;
+}
+
+/* Style de notre premiere Section avec notre Banniere */ 
+
+.banner {
+	justify-content: center;
+	min-height: 100vh;
+	color: #fff;
+	text-align: center;
+	background-image: url(../img/head_bg.jpg);
+	background-position: center center;
+	background-size: cover;
+}
+
+.banner h1 {
+	font-family: 'Berkshire Swash', cursive;
+	font-size: 180px;
+	margin: 20px 0 0;
+	color:#fff;
+	text-shadow: 0 0 10px rgba(0,0,0,0.5);
+	font-weight: 500;
+}
+
+.banner h2 {
+	font: normal 22px 'Roboto', sans-serif;
+	margin-bottom: 50px;
+}
+
+.banner a.btn {
+	padding: 15px 30px;
+}
+
+.playbutton {
+    font-size: 32px;
+    border-radius: 66px;
+    border-style: solid;
+    border-width: 8px;
+    border-color: #278da6;
+    padding: 16px 19px 12px 19px;
+    margin-top: 50px;
+    display: inline-block;
+    transition: all 0.10s;
+}
+
+.playbutton:hover {
+	background:#278da6;
+	transform: scale(1.1);
+	box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+/* Style de notre seconde Section Qui suis-je */ 
+
+.whoiam {
+	width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.profil {
+	padding: 0 15px;
+    flex-basis: 40%;
+    text-align: center;
+}
+
+.description {
+	padding: 0 15px;
+    flex-basis: 60%;
+    text-align: left;
+}
+
+.description h4 {
+	color: #001A21;
+    font-size: 35px;
+    margin: 20px 0;
+    font-weight: 900;
+}
+
+.description p {
+	padding: 0;
+	text-align: left;
+}
+
+
+
+/* Style de la section newsletter */
+
+.newsletter {
+	background-image: url(../img/bg_news.jpg);
+	padding: 50px 0;
+	background-size: cover;
+	background-position: center center;
+}
+
+.newsletter h3.title, .newsletter p {
+	color: #fff;
+}
+
+.newsletter form {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	max-width: 800px;
+	width: 80%;
+}
+
+.newsletter form input {
+	padding: 15px;
+	flex: 1;
+	margin-right: 30px;
+	font-size: 18px;
+	color: #555;
+}
+
+
+/* Style de notre seconde Section avec les Services */ 
+
+#services {
+	background:rgba(212, 211, 211, 0.09);
+}
+
+.noServices {
+	width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.services {
+	padding: 0 30px;
+    flex-basis: 33%;
+    text-align: center;
+	transition: all .15s ease-in-out;
+}
+
+.services h4 {
+    color: #001A21;
+    font-size: 35px;
+    margin: 20px 0;
+    font-weight: 900;
+}
+
+.services h4 span {
+    font-weight: 900;
+    color: #ff0d51;
+}
+
+.services:hover {
+  transform: scale(1.02);
+}
+
+.fa-utensils, .fa-chair, .fa-shopping-bag {
+	font-size: 80px;
+	color: #fbb731;
+}
+
+
+
+/* Style de notre section Nos produits */
+
+.gallery {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.gallery p {
+	text-align: left;
+	padding: 0;
+}
+
+.pics {
+	flex-basis: 33%;
+	padding: 10px;
+}
+
+
+/* Style de notre section Contact */
+#contact {
+	background:rgba(212, 211, 211, 0.09);
+}
+
+.contact form {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+.contact form input {
+	padding: 15px;
+	flex: 1;
+	margin-right: 30px;
+	font-size: 18px;
+	color: #555;
+}
+
+.contact form .btn {
+	padding: 18px 42px;
+	background: #001A21;
+}
+
+.contact form .btn:hover {
+	background: #278da6;
+}
+
+
+/* Style de notre footer */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    background-color: #001A21;
+    padding: 40px 0;
+}
+
+footer ul {
+	display: flex;
+	margin-bottom: 25px;
+	font-size: 32px;
+}
+
+footer ul li {
+	margin: 0 8px;
+}
+
+footer p {
+	text-transform: uppercase;
+	font-size: 14px;
+	color: rgba(255, 255, 255, .6);
+	margin-bottom: 10px;
+}
+
+footer p a, footer ul a {
+	color: #fff;
+}
+
+footer p a:hover, footer ul a:hover {
+	color: #278da6;
+}
+
+
+/* On gere le responsive pour les devices de < 1024px */
+@media screen and (max-width: 1024px) {
+	section {
+		padding: 90px 30px;
+	}
+}
+
+/* On gere le responsive pour les devices de < 768px */
+@media screen and (max-width: 768px) {
+	header {
+		z-index: 1;
+	}
+
+    .main-nav {
+        width: 100%;
+        height: auto;
+    }
+	
+    .main-nav ul {
+        display: block;
+        max-height: 0;
+    	overflow: hidden;
+    	-webkit-transition: max-height 0.6s;
+    	-moz-transition: max-height 0.6s;
+        -ms-transition: max-height 0.6s;
+        -o-transition: max-height 0.6s;
+    	transition: max-height 0.6s;
+		/* pour faire pop le menu depuis la gauche > remplacer max-height par max-width */
+		/* pour faire sortir le menu depuis la droite > ajouter un float: right */
+		background-color: #001a21;
+		margin-top: 10px;
+    }
+	
+    .main-nav ul li {
+        text-align: left;
+		padding: 10px; 
+		border-bottom: 1px solid #fff;
+        display: block;
+    }
+
+    .main-nav ul li a {
+        color: #fff;
+    }
+	
+	.main-nav ul li:last-child {
+		border:none;
+	}
+	
+    .menu-icon {
+		width: 50px;
+		height: inherit;
+		display: block;
+		position: absolute;
+		top: 20px;
+		right: 0;
+    }
+	
+    #menuToggle:checked ~ ul {
+        max-height: 270px;
+        /* max-width: 350px; On replace aussi ici le max-heght par le max-width */ 
+    }
+	
+    .menu-icon i {
+        font-size: 1.7em;
+		color: #fff;
+    }
+	
+	section {
+		padding: 90px 40px;
+	}
+	
+	section h3.title {
+		font-size: 50px;
+	}
+	
+	.banner h1 {
+		font-size: 100px;
+	}
+
+	.banner h2 {
+		font-size: 16px;
+	}
+	
+	.services {
+		margin-bottom: 65px;
+        flex-basis: 50%;
+	}
+	
+	.newsletter form input, .contact form input {
+		flex-basis: 100%;
+		margin: 0 0 20px 0;
+	}
+	
+
+}
+
+
+/* On gere le responsive pour les devices de < 414px */
+@media screen and (max-width: 414px) {
+	.pics {
+		-ms-flex: 100%;
+		flex: 100%;
+		max-width: 100%;
+	}
+
+	.disoff {
+		display:none;
+	}
+
+    .services, .profil, .description {
+        flex-basis: 100%;
+        padding: 10px;
+	}
+
+    section {
+        padding: 70px 0;
+    }
+}
+
+/* On gere le responsive pour les devices de < 320px */
+@media screen and (max-width: 320px) {
+	section h3.title {
+		font-size: 40px;
+	}
+}
